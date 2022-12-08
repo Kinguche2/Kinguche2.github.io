@@ -6,6 +6,7 @@ import MovieListHeading from './components/MovieListHeading';
 import SearchBox from './components/SearchBox';
 import AddFavorites from './components/AddFavorites';
 import RemoveFavorites from './components/RemovieFavorite';
+import logo from './logo.png';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -58,6 +59,7 @@ const App = () => {
 
   return (
       <div className='container-fluid movie-app'>
+        <img src={logo} alt="Logo" className='image-container' />
         <div className='row d-flex align-items-center mt-4 mb-4'>
           <MovieListHeading heading='Movies'/>
           <SearchBox searchValue={searchValue} setSearchValue={setSearchValue}/>
