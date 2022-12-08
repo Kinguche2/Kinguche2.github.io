@@ -7,6 +7,7 @@ import SearchBox from './components/SearchBox';
 import AddFavorites from './components/AddFavorites';
 import RemoveFavorites from './components/RemovieFavorite';
 
+//A state object that holds the results from the search
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [favorites, setFavorites] = useState([]);
