@@ -1,5 +1,6 @@
 import React from "react";
 
+//Search box component
 const SearchBox = (props) => {
     return (
         <div className="col col-sm-4">
