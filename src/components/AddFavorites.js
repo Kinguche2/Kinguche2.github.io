@@ -1,5 +1,6 @@
 import React from "react";
 
+//Handles the add favorites section
 const AddFavorite = () => {
     return (
         <>

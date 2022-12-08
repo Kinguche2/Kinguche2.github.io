@@ -1,5 +1,6 @@
 import React from "react";
 
+//Sets the Movie list for favorites and searched movie list
 const MovieList = (props) => {
     const FavoriteComponent = props.favoriteComponent;
     return (

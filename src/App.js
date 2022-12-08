@@ -8,12 +8,13 @@ import AddFavorites from './components/AddFavorites';
 import RemoveFavorites from './components/RemovieFavorite';
 import logo from './logo.png';
 
-//A state object that holds the results from the search
+//state objects that holds values
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [searchValue, setSearchValue] = useState("");
 
+  //Makes a request to the API
   const getMovieRequest = async () => {
     const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=95ba243d`
 
@@ -25,10 +26,12 @@ const App = () => {
     }
   };
 
+  //Calls the getMovieRequest
   useEffect(() =>{
     getMovieRequest(searchValue);
   }, [searchValue]);
 
+  //Gets the favorites from local storage
   useEffect(() => {
     const moviefavorites = JSON.parse(
       localStorage.getItem('react-movie-mine-favorites')
@@ -39,16 +42,19 @@ const App = () => {
     };
   }, []);
 
+  //Saves to storage
   const saveToLocalStorage = (items) => {
     localStorage.setItem('react-movie-mine-favorites', JSON.stringify(items));
   };
 
+  //creates the favorites and saves to storage
   const addFavoriteMovie = (movie) => {
     const newFavoriteList = [...favorites, movie];
     setFavorites(newFavoriteList);
     saveToLocalStorage(newFavoriteList);
   };
 
+  //removes items from the favorites list and updates storage
   const removefavoriteMovie = (movie) => {
     const newFavoriteList = favorites.filter(
       (favorite) => favorite.imdbID !== movie.imdbID

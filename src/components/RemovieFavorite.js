@@ -1,5 +1,6 @@
 import React from "react";
 
+//Handles the Remove from favorites component
 const RemoveFavorites = () => {
     return (
 		<>
