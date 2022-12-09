@@ -4,7 +4,7 @@ Movie Mine is a movie search application that takes in text and displays an arra
 You can do the following with the application:
 
 * Search Movies
-* Add movies to a list of favorite movies to your local storage
+* Add movies to a list of favorite movies that appears everytime the page loads
 * Remove movies from the favorites list
 
 [this is the link to the application](https://movie-mine.netlify.app/)
