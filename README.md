@@ -13,4 +13,8 @@ You can do the following with the application:
 
 [this is the link to the application](https://movie-mine.netlify.app/)
 
-#
+## Dependencies
+They are:
+
+* [React](https://reactjs.org/)                                           | ^16.9.0
+* [Bootstrap](https://getbootstrap.com)                                   | ^5.2.x
